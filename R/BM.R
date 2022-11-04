@@ -1,7 +1,7 @@
 #'Creates The Use of Marginal Distributions in Conditional Forecasting
 #' @export
 #' @param dt The parameter that containing the data
-ff=function(dt)
+ff=function(dt=data.frame())
 {
   n=nrow(dt)
   print("Enter the number of time series")
@@ -25,7 +25,7 @@ ff=function(dt)
     rn[i]=mx[i]-mn[i]
   }
   rn=round(rn,2)
-
+  
   for(i in 1:m)
   {
     l[i]=(rn[i]/k)
@@ -65,7 +65,7 @@ ff=function(dt)
   {f2(q,dt,xd,xu,xx,k,n,r,rr,m,w)}
   if(m==3)
   {f3(q,dt,xd,xu,xx,k,n,r,rr,m,w)}
-
+}
 f2=function(q,dt,xd,xu,xx,k,n,r,rr,m,w)
 {
   print("Enter independent time series values")
@@ -103,7 +103,7 @@ f2=function(q,dt,xd,xu,xx,k,n,r,rr,m,w)
       else
       {for(sss in 1:k)
         y=y+(rr3[sss]*xx[sss,2])}}
-
+    
     su=sum(y)
   }
   print("Enter the predicted values");print(su)
@@ -158,4 +158,5 @@ f3=function(q,dt,xd,xu,xx,k,n,r,rr,m,w,rr3)
           su=sum(y)
         }}}
     print("predicted values");print(su)
-}}}
+  }}
+
