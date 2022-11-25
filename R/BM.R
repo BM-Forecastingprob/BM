@@ -1,7 +1,7 @@
 #'Creates The Use of Marginal Distributions in Conditional Forecasting
 #' @export
 #' @param dt The parameter that containing the data
-#' @param m number of time series
+#' @param m number of time series 
 ff=function(dt=data.frame())
 {
   n=nrow(dt)
